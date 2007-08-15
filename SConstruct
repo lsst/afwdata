@@ -6,7 +6,7 @@ import glob
 import lsst.SConsUtils as scons
 
 env = scons.makeEnv("fwData",
-                    r"$HeadURL: svn+ssh://svn.lsstcorp.org/DC2/data/fwData/SConstruct $",
+                    r"$HeadURL$",
                     [])
 
 Alias("install", [env.Install(env['prefix'], glob.glob("*.fits")),
