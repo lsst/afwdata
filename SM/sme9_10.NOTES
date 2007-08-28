@@ -1,0 +1,10 @@
+Files come from SuperMACHO
+   Science image : workspace/sm021115_smtempl/10/sme9.021115_0430.074_10.diff.im.fits
+                   ->
+                   sm021115/10/sme9.021115_0430.074_10.sw.fits
+
+   Template image: workspace/sm021115_smtempl/10/sme9.021115_0430.074_10.diff.tmpl.fits
+                   ->
+                   smtempl/10/sme9.011211_0519.022_10.sw.fits
+
+Actually, the template has worse seeing than the science image; switch around for testing here.
