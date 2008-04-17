@@ -5,7 +5,7 @@
 import glob
 import lsst.SConsUtils as scons
 
-env = scons.makeEnv("fwData",
+env = scons.makeEnv("afwdata",
                     r"$HeadURL$",
                     [])
 
