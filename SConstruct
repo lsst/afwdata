@@ -10,6 +10,7 @@ env = scons.makeEnv("afwdata",
                     [])
 
 Alias("install", [env.Install(env['prefix'], glob.glob("*.fits")),
+                  env.Install(env['prefix'], "CFHT"),
                   env.InstallEups(env['prefix'] + "/ups", glob.glob("ups/*.table"))])
 
 
