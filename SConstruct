@@ -9,12 +9,33 @@ env = scons.makeEnv("afwdata",
                     r"$HeadURL$",
                     [])
 
-Alias("install", [env.Install(env['prefix'], glob.glob("*.fits")),
-                  env.Install(os.path.join(env['prefix'], "CFHT", "D4"),
-                              glob.glob(os.path.join("CFHT", "D4", "*.fits"))),
-                  env.Install(os.path.join(env['prefix'], "Statistics"),
-                              glob.glob(os.path.join("Statistics", "*.fits"))),
-                  env.InstallEups(env['prefix'] + "/ups", glob.glob("ups/*.table"))])
+# files with the following suffixes are considered data files
+DataFileSuffixSet = set((".fits", ".dat", ".txt"))
+
+def getInstallList(basePath):
+    """Make an install list for all data files in or below the specified base path
+    
+    Data files have suffixes in DataFileSuffixSet
+    
+    Excludes invisible files and files in invisible directories.
+    """
+    installList = []
+    isBaseDir = True
+    for dirPath, dirNameList, fileNameList in os.walk(basePath):
+        dataFileList = (os.path.join(dirPath, fn) for fn in fileNameList if \
+            ((fn[0] != ".") and (os.path.splitext(fn)[1] in DataFileSuffixSet)))
+        installList.append(env.Install(env['prefix'] + dirPath[1:], list(dataFileList)))
+
+        newDirNameList = (dn for dn in dirNameList if dn[0] != ".")
+        if isBaseDir:
+            newDirNameList = (dn for dn in newDirNameList if dn != "ups")
+        if newDirNameList != dirNameList:
+            dirNameList[:] = newDirNameList
+        isBaseDir = True
+    return installList
+
+Alias("install", getInstallList(".") +
+    [env.InstallEups(env['prefix'] + "/ups", glob.glob("ups/*.table"))])
 
 scons.CleanTree(r"*~ core *.so *.os *.o")
 
