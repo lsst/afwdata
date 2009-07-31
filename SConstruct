@@ -13,13 +13,13 @@ env = scons.makeEnv("afwdata",
 DataFileSuffixSet = set((".fits", ".dat", ".txt"))
 
 def getInstallList(basePath):
-    """Make an install list for all data files in or below the specified base path
+    """Make an install list for all data files in or below the specified base path, plus ups table files.
     
     Data files have suffixes in DataFileSuffixSet
     
     Excludes invisible files and files in invisible directories.
     """
-    installList = []
+    installList = [env.InstallEups(env['prefix'] + "/ups", glob.glob("ups/*.table"))]
     isBaseDir = True
     for dirPath, dirNameList, fileNameList in os.walk(basePath):
         dataFileList = (os.path.join(dirPath, fn) for fn in fileNameList if \
@@ -34,13 +34,12 @@ def getInstallList(basePath):
         isBaseDir = True
     return installList
 
-Alias("install", getInstallList(".") +
-    [env.InstallEups(env['prefix'] + "/ups", glob.glob("ups/*.table"))])
+Alias("install", getInstallList("."))
 
 scons.CleanTree(r"*~ core *.so *.os *.o")
 
 env.Declare()
 
 env.Help("""
-Test data for lsst/fw
+Test data for lsst/afw
 """)
