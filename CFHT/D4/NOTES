@@ -1,0 +1,3 @@
+the template images have FWHM ~ 5.5 pixels
+the science images have FWHM ~4 pixels
+therefore any kernels will be deconvolution
