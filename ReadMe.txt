@@ -13,4 +13,5 @@ These are used in unit tests for lsst.afw.math.warpExposure.
 As such they are intentionally have a large rotation and scale change
 and some edge pixels.
 
-medswarp1.head is used by medswarpcommands.sh to describe the desired WCS of the swarped images.
+medswarp1.head and medsubswarp1.head are used by medswarpcommands.sh to describe the desired WCS
+of the swarped images.
