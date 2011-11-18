@@ -1,5 +1,5 @@
-
-# /
-/.sconsign.dblite
-/.sconf_temp
-/config.log
+.sconsign.dblite
+.sconf_temp
+config.log
+*.cfgc
+python/lsst/afwdata/version.py
