@@ -1,3 +1,1 @@
-#if (type == build) {
-    setupRequired(scons)
-#}
+setupRequired(sconsUtils)
