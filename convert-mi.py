@@ -36,6 +36,12 @@ def main(names):
             if os.path.exists(miName):
                 os.remove(miName)
             miFits.writeto(miName)
+            imgFits.close()
+            mskFits.close()
+            varFits.close()
+            os.remove(imgName)
+            os.remove(mskName)
+            os.remove(varName)
         else:
             print "Images with base name '%s' not found; skipping." % baseName
 
