@@ -50,7 +50,7 @@ The ``cache`` credential helper will remember your password for 15 minutes by de
 Once git-lfs is installed and configured, clone an lfs-enabled repository such as this one with the HTTPS protocol:
 
 ```bash
-git clone https://github.com/lsst/afwdata-cowboy.git
+git clone https://github.com/lsst/afwdata.git
 ```
 
 `git clone` will ask you to authenticate to our git-lfs server:
