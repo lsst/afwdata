@@ -27,7 +27,7 @@ There is a small amount of one-time setup to use git-lfs for any project on your
 ```bash
 brew install git-lfs
 git config --global credential.helper osxkeychain
-git config --global lfs.batch=false
+git config --global lfs.batch false
 git lfs init
 ```
 
@@ -39,7 +39,7 @@ The ``osxkeychain`` helper will store your password/token securely in OS X's key
 
 ```bash
 git config --global credential.helper cache # A credential helper is highly recommended.
-git config --global lfs.batch=false
+git config --global lfs.batch false
 git lfs init
 ```
 
@@ -50,7 +50,7 @@ The ``cache`` credential helper will remember your password for 15 minutes by de
 Once git-lfs is installed and configured, clone an lfs-enabled repository such as this one with the HTTPS protocol:
 
 ```bash
-git clone https://github.com/lsst/afwdata-cowboy.git
+git clone https://github.com/lsst/afwdata.git
 ```
 
 `git clone` will ask you to authenticate to our git-lfs server:
