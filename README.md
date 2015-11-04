@@ -14,9 +14,7 @@ There is **no password required** for cloning or pulling from LSST's git-lfs ser
 If you are a member of the lsst GitHub organization, then you may push using git-lfs. To push, you should login using your GitHub username and password (or [token for 2FA users](#token)) to the git-lfs server (git-lfs.lsst.codes).
 
 If you are using [GitHub's two-factor authentication (2FA)](https://help.github.com/articles/about-two-factor-authentication/), use a personal access token instead of your GitHub password.
-You can create a token specifically for `git-lfs.lsst.codes` by going to [https://github.com/settings/tokens](https://github.com/settings/tokens). Tokens for our gitLFS service only require read:org scope. 
-
-If you have not been using https already for Github, you have the choice of setting that up with just your normal password or if you prefer, another token with public_repo scope (and see Credential Helpers below). You might want to test using https access with your Github repos first with a non-LFS repo to avoid confusion. 
+You can create a token specifically for `git-lfs.lsst.codes` by going to [https://github.com/settings/tokens](https://github.com/settings/tokens). Tokens for our gitLFS service only require read:org scope. If you have not been using https already for Github, and have 2FA turned on, you will want another public_repo scope token. You might want to test using https access with your Github repos first with a non-LFS repo to avoid confusion. 
 
 
 Setting up git-lfs for the first time
