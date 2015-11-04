@@ -27,7 +27,7 @@ There is a small amount of one-time setup to use git-lfs for any project on your
 ```bash
 brew install git-lfs
 git config --global credential.helper osxkeychain
-git config --global lfs.batch=false
+git config --global lfs.batch false
 git lfs init
 ```
 
@@ -39,7 +39,7 @@ The ``osxkeychain`` helper will store your password/token securely in OS X's key
 
 ```bash
 git config --global credential.helper cache # A credential helper is highly recommended.
-git config --global lfs.batch=false
+git config --global lfs.batch false
 git lfs init
 ```
 
