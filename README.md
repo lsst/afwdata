@@ -24,8 +24,10 @@ There is a small amount of one-time setup to use git-lfs for any project on your
 
 ### Mac OS X
 
+[Download and install](https://github.com/github/git-lfs/releases/) the current git-lfs,
+or install using homebrew: `brew install git-lfs`
+
 ```bash
-brew install git-lfs
 git config --global credential.helper osxkeychain
 git config --global lfs.batch false
 git lfs init
@@ -35,7 +37,7 @@ The ``osxkeychain`` helper will store your password/token securely in OS X's key
 
 ### Linux
 
-[Download and install](https://github.com/github/git-lfs/releases/tag/v1.0.0) the current git-lfs.
+[Download and install](https://github.com/github/git-lfs/releases/) the current git-lfs.
 
 ```bash
 git config --global credential.helper cache # A credential helper is highly recommended.
