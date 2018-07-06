@@ -19,7 +19,7 @@ def main(names):
         varName = baseName + suffix % "var"
         miName = baseName + ".fits"
         if os.path.exists(imgName) and os.path.exists(mskName) and os.path.exists(varName):
-            print "Converting '%s_(img|mask|var).fits' to '%s.fits'" % (baseName, baseName)
+            print("Converting '%s_(img|mask|var).fits' to '%s.fits'" % (baseName, baseName))
             imgFits = pyfits.open(imgName, do_not_scale_image_data=True)
             mskFits = pyfits.open(mskName, do_not_scale_image_data=True)
             varFits = pyfits.open(varName, do_not_scale_image_data=True)
@@ -43,7 +43,7 @@ def main(names):
             os.remove(mskName)
             os.remove(varName)
         else:
-            print "Images with base name '%s' not found; skipping." % baseName
+            print("Images with base name '%s' not found; skipping." % baseName)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
