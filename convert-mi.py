@@ -6,6 +6,7 @@ import os
 
 suffix = "_%s.fits"
 
+
 def main(names):
     baseNames = []
     for name in names:
@@ -44,6 +45,7 @@ def main(names):
             os.remove(varName)
         else:
             print("Images with base name '%s' not found; skipping." % baseName)
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])
