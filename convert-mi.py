@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+"""Convert from multi-file to multi-extension.
+"""
+
 from astropy.io import fits
 import sys
 import os
