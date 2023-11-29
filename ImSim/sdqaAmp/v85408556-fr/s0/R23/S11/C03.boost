@@ -1,6 +1,3 @@
-22 serialization::archive 5 0 0 0 0 5 1 0 1 3 1 0
-0 0 0 699666892899 1014.019625 0 12 overscanMean 0 3
-1 0 0 699666892899 1014 0 14 overscanMedian 0 3
-2 0 0 699666892899 1.9187756700260497 0 14 overscanStdDev 0 3
-3 0 0 699666892899 1008 0 11 overscanMin 0 3
-4 0 0 699666892899 1021 0 11 overscanMax 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:246f2ff08bfbae18daba10fcccb60ca5fde1901e927129804e3bd6f6ab373108
+size 301
